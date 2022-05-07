@@ -1,0 +1,13 @@
+﻿@model PremierLeague.Web.Models.PlayerListViewModel
+
+@{
+    ViewData["Title"] = "PlayersIndex";
+}
+
+<h2>Players Index</h2>
+
+<p style="color:red">@TempData["editResult"]</p>
+
+@await Html.PartialAsync("PlayersEdit", Model.EditedPlayer)
+
+@await Html.PartialAsync("PlayersList", Model.Players)

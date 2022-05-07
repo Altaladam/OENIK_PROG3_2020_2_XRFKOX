@@ -1,0 +1,36 @@
+﻿@model PremierLeague.Web.Models.Player
+
+@{
+    ViewData["Title"] = "PlayersDetails";
+}
+
+<h2>Egy játékos adatlapja</h2>
+
+@Html.ActionLink("Vissza a listához", "Index")
+
+<table border="1">
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Id)</td>
+        <td>@Html.DisplayFor(m => m.Id)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Name)</td>
+        <td>@Html.DisplayFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Nationality)</td>
+        <td>@Html.DisplayFor(m => m.Nationality)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Position)</td>
+        <td>@Html.DisplayFor(m => m.Position)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Birthday)</td>
+        <td>@Html.DisplayFor(m => m.Birthday)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Value)</td>
+        <td>@Html.DisplayFor(m => m.Value)</td>
+    </tr>
+</table>

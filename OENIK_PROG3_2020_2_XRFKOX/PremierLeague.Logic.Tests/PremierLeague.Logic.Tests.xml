@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PremierLeague.Logic.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:PremierLeague.Logic.Tests.LogicTests">
+            <summary>
+            The class where the unit tests are implemented.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.Tests.LogicTests.TestGetPlayerByID">
+            <summary>
+            Tests the GetPlayerByID method.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.Tests.LogicTests.TestGetAllManagers">
+            <summary>
+            Tests the GetAllManagers method.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.Tests.LogicTests.TestChangePlayerName">
+            <summary>
+            Tests the ChangePlayerName method.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.Tests.LogicTests.TestAddTeam">
+            <summary>
+            Tests the AddTeam method.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.Tests.LogicTests.TestDeleteTeam">
+            <summary>
+            Tests the DeleteTeam method.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.Tests.LogicTests.TestGetEnglishPlayers">
+            <summary>
+            Tests the GetEnglishPlayers method.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.Tests.LogicTests.TestGetYoungestPlayer">
+            <summary>
+            Tests the GetYoungestPlayer method.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.Tests.LogicTests.TestGetTeamValue">
+            <summary>
+            Tests the GetTeamValue method.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PremierLeague.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:PremierLeague.Logic.IModifyLogic">
+            <summary>
+            Provides functionality for the CRUD operations that modify the database (add, change, delete).
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.AddManager(PremierLeague.Data.Manager)">
+            <summary>
+            Adds a manager into the database.
+            </summary>
+            <param name="manager">The manager to be added.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.DeleteManager(System.Int32)">
+            <summary>
+            Deletes a manager.
+            </summary>
+            <param name="id">The id of the manager to be deleted.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeManagerName(System.Int32,System.String)">
+            <summary>
+            Changes the name of the manager.
+            </summary>
+            <param name="id">The id of the manager whose name's to be changed.</param>
+            <param name="newName">The new name of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeManagerBirthday(System.Int32,System.DateTime)">
+            <summary>
+            Changes the birthday of the manager.
+            </summary>
+            <param name="id">The id of the manager whose birthday's to be changed.</param>
+            <param name="newBirthday">The new birthday of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeManagerNationality(System.Int32,System.String)">
+            <summary>
+            Changes the nationality of the manager.
+            </summary>
+            <param name="id">The id of the manager whose nationality's to be changed.</param>
+            <param name="newNationality">The new nationality of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeManagerPreferredFormation(System.Int32,System.String)">
+            <summary>
+            Changes the preferred formation of the manager.
+            </summary>
+            <param name="id">The id of the manager whose preferred formation's to be changed.</param>
+            <param name="newPreferredFormation">The new preferred formation of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeManagerContractStart(System.Int32,System.DateTime)">
+            <summary>
+            Changes the start of the contract of the manager.
+            </summary>
+            <param name="id">The id of the manager whose contracts start's to be changed.</param>
+            <param name="newContractStart">The new start of the contract of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.AddPlayer(PremierLeague.Data.Player)">
+            <summary>
+            Adds a player into the database.
+            </summary>
+            <param name="player">The player to be added.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.DeletePlayer(System.Int32)">
+            <summary>
+            Deletes a player.
+            </summary>
+            <param name="id">The id of the player to be deleted.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangePlayerName(System.Int32,System.String)">
+            <summary>
+            Changes the name of the player.
+            </summary>
+            <param name="id">The id of the player whose name's to be changed.</param>
+            <param name="newName">The new name of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangePlayerBirthday(System.Int32,System.DateTime)">
+            <summary>
+            Changes the birthday of the player.
+            </summary>
+            <param name="id">The id of the player whose birthday's to be changed.</param>
+            <param name="newBirthday">The new birthday of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangePlayerNationality(System.Int32,System.String)">
+            <summary>
+            Changes the nationality of the player.
+            </summary>
+            <param name="id">The id of the player whose nationality's to be changed.</param>
+            <param name="newNationality">The new nationality of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangePlayerPosition(System.Int32,System.String)">
+            <summary>
+            Changes the position of the player.
+            </summary>
+            <param name="id">The id of the player whose position's to be changed.</param>
+            <param name="newPosition">The new position of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangePlayerValue(System.Int32,System.Int32)">
+            <summary>
+            Changes the value of the player.
+            </summary>
+            <param name="id">The id of the player whose value's to be changed.</param>
+            <param name="newValue">The new value of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.AddTeam(PremierLeague.Data.Team)">
+            <summary>
+            Adds a team into the database.
+            </summary>
+            <param name="team">The team to be added.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.DeleteTeam(System.Int32)">
+            <summary>
+            Deletes a team.
+            </summary>
+            <param name="id">The id of the team to be deleted.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeTeamName(System.Int32,System.String)">
+            <summary>
+            Changes the name of the team.
+            </summary>
+            <param name="id">The id of the team thats name's to be changed.</param>
+            <param name="newName">The new name of the team.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeTeamCity(System.Int32,System.String)">
+            <summary>
+            Changes the city of the team.
+            </summary>
+            <param name="id">The id of the team thats city's to be changed.</param>
+            <param name="newCity">The new city of the team.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeTeamFoundationYear(System.Int32,System.Int32)">
+            <summary>
+            Changes the year the team was founded.
+            </summary>
+            <param name="id">The id of the team thats year of foundation's to be changed.</param>
+            <param name="newFoundationYear">The new year of foundation of the team.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeTeamValue(System.Int32,System.Int32)">
+            <summary>
+            Changes the value of the team.
+            </summary>
+            <param name="id">The id of the team thats value's to be changed.</param>
+            <param name="newValue">The new value of the team.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.IModifyLogic.ChangeTeamStadium(System.Int32,System.String)">
+            <summary>
+            Changes the name of the stadium of the team.
+            </summary>
+            <param name="id">The id of the team thats stadiums name's to be changed.</param>
+            <param name="newStadium">The new name of the stadium of the team.</param>
+        </member>
+        <member name="T:PremierLeague.Logic.IReadLogic">
+            <summary>
+            Provides functionality for the 'read' CRUD operations and the non-CRUD operations.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.IReadLogic.GetManagerByID(System.Int32)">
+            <summary>
+            Gets the manager with the given id.
+            </summary>
+            <param name="id">The id of the manager.</param>
+            <returns>Returns the manager with the given id.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.IReadLogic.GetAllManagers">
+            <summary>
+            Gets all managers.
+            </summary>
+            <returns>A list of all managers.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.IReadLogic.GetPlayerByID(System.Int32)">
+            <summary>
+            Gets the player with the given id.
+            </summary>
+            <param name="id">The id of the player.</param>
+            <returns>Returns the player with the given id.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.IReadLogic.GetAllPlayers">
+            <summary>
+            Gets all players.
+            </summary>
+            <returns>A list of all players.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.IReadLogic.GetTeamByID(System.Int32)">
+            <summary>
+            Gets the team with the given id.
+            </summary>
+            <param name="id">The id of the team.</param>
+            <returns>Returns the team with the given id.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.IReadLogic.GetAllTeams">
+            <summary>
+            Gets all teams.
+            </summary>
+            <returns>A list of all teams.</returns>
+        </member>
+        <member name="T:PremierLeague.Logic.ModifyLogic">
+            <summary>
+            Passes on the modifying operations.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.#ctor(PremierLeague.Repository.IManagerRepository,PremierLeague.Repository.IPlayerRepository,PremierLeague.Repository.ITeamRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ModifyLogic"/> class.
+            </summary>
+            <param name="managerRepo">The repository for the CRUD operations of the managers.</param>
+            <param name="playerRepo">The repository for the CRUD operations of the players.</param>
+            <param name="teamRepo">The repository for the CRUD operations of the teams.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.#ctor(PremierLeague.Repository.IManagerRepository,PremierLeague.Repository.ITeamRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ModifyLogic"/> class.
+            </summary>
+            <param name="managerRepo">The repository for the CRUD operations of the managers.</param>
+            <param name="teamRepo">The repository for the CRUD operations of the teams.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.#ctor(PremierLeague.Repository.ITeamRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ModifyLogic"/> class.
+            </summary>
+            <param name="teamRepo">The repository for the CRUD operations of the teams.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.#ctor(PremierLeague.Repository.IPlayerRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ModifyLogic"/> class.
+            </summary>
+            <param name="playerRepo">The repository for the CRUD operations of the players.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.AddManager(PremierLeague.Data.Manager)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeManagerBirthday(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeManagerContractStart(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeManagerName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeManagerNationality(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeManagerPreferredFormation(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.DeleteManager(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.AddPlayer(PremierLeague.Data.Player)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangePlayerBirthday(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangePlayerName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangePlayerNationality(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangePlayerPosition(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangePlayerValue(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangePlayer(System.Int32,PremierLeague.Data.Player)">
+            <summary>
+            Changes the given property of the Player.
+            </summary>
+            <param name="id"> The id of the Player.</param>
+            <param name="player">The modified Player.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.DeletePlayer(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeTeamCity(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeTeamFoundationYear(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeTeamName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeTeamStadium(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.ChangeTeamValue(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.AddTeam(PremierLeague.Data.Team)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ModifyLogic.DeleteTeam(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PremierLeague.Logic.ReadLogic">
+            <summary>
+            Passes on the read and non-CRUD operations.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.#ctor(PremierLeague.Repository.IManagerRepository,PremierLeague.Repository.IPlayerRepository,PremierLeague.Repository.ITeamRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ReadLogic"/> class.
+            </summary>
+            <param name="managerRepo">The repository for the CRUD operations of the managers.</param>
+            <param name="playerRepo">The repository for the CRUD operations of the players.</param>
+            <param name="teamRepo">The repository for the CRUD operations of the teams.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.#ctor(PremierLeague.Repository.IPlayerRepository,PremierLeague.Repository.ITeamRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ReadLogic"/> class.
+            </summary>
+            <param name="playerRepo">The repository for the CRUD operations of the players.</param>
+            <param name="teamRepo">The repository for the CRUD operations of the teams.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.#ctor(PremierLeague.Repository.IPlayerRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ReadLogic"/> class.
+            </summary>
+            <param name="playerRepo">The repository for the CRUD operations of the players.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.#ctor(PremierLeague.Repository.IManagerRepository,PremierLeague.Repository.ITeamRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ReadLogic"/> class.
+            </summary>
+            <param name="managerRepo">The repository for the CRUD operations of the managers.</param>
+            <param name="teamRepo">The repository for the CRUD operations of the teams.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.#ctor(PremierLeague.Repository.IManagerRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Logic.ReadLogic"/> class.
+            </summary>
+            <param name="managerRepo">The repository for the CRUD operations of the managers.</param>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetAllManagers">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetManagerByID(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetAllPlayers">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetPlayerByID(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetAllTeams">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetTeamByID(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetYoungestPlayers">
+            <summary>
+            Gets the youngest player in every team.
+            </summary>
+            <returns>The list of every teams youngest player.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetTeamValue">
+            <summary>
+            Gets the sum of the value of the teams' players.
+            </summary>
+            <returns>A Dictionary of team names and values.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetEnglishPlayers">
+            <summary>
+            Gets all the english playes.
+            </summary>
+            <returns>A list of all english players.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetYoungestPlayersAsync">
+            <summary>
+            Asynchronously gets the youngest player in every team.
+            </summary>
+            <returns>A task that has the list of every teams youngest player.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetTeamValueAsync">
+            <summary>
+            Asynchronously gets the sum of the value of the teams' players.
+            </summary>
+            <returns>A task that has a Dictionary of team names and values.</returns>
+        </member>
+        <member name="M:PremierLeague.Logic.ReadLogic.GetEnglishPlayersAsync">
+            <summary>
+            Asynchronously gets all the english playes.
+            </summary>
+            <returns>A task that has a list of all english players.</returns>
+        </member>
+    </members>
+</doc>

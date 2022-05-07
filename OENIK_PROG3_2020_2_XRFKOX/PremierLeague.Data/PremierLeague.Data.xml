@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PremierLeague.Data</name>
+    </assembly>
+    <members>
+        <member name="T:PremierLeague.Data.Manager">
+            <summary>
+            Contains the managers.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Manager.ManagerID">
+            <summary>
+            Gets or sets the ID of the manager.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Manager.Name">
+            <summary>
+            Gets or sets the name of the manager.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Manager.Birthday">
+            <summary>
+            Gets or sets the birthday of the manager.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Manager.Nationality">
+            <summary>
+            Gets or sets the nationality of the manager.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Manager.ContractStart">
+            <summary>
+            Gets or sets the start of the managers contract.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Manager.PreferredFormation">
+            <summary>
+            Gets or sets the preferred formation of the manager.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Manager.Team">
+            <summary>
+            Gets or Sets the team of the manager.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Manager.TeamID">
+            <summary>
+            Gets or sets the ID of the team of the manager.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Data.Manager.ToString">
+            <summary>
+            Converts the value of the managers proprerties into a single string.
+            </summary>
+            <returns>string.</returns>
+        </member>
+        <member name="T:PremierLeague.Data.Player">
+            <summary>
+            Contains the players.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Player.PlayerID">
+            <summary>
+            Gets or sets the ID of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Player.Name">
+            <summary>
+            Gets or sets the name of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Player.Birthday">
+            <summary>
+            Gets or sets the birthday of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Player.Nationality">
+            <summary>
+            Gets or sets the nationality of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Player.Position">
+            <summary>
+            Gets or sets the position of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Player.Value">
+            <summary>
+            Gets or sets the value of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Player.Team">
+            <summary>
+            Gets or sets the team of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Player.TeamID">
+            <summary>
+            Gets or sets the ID of the team of the player.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Data.Player.ToString">
+            <summary>
+            Converts the value of the players properties into a single string.
+            </summary>
+            <returns>string.</returns>
+        </member>
+        <member name="T:PremierLeague.Data.PLContext">
+            <summary>
+            Handles the context of the database.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Data.PLContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Data.PLContext"/> class.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Data.PLContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{PremierLeague.Data.PLContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Data.PLContext"/> class.
+            </summary>
+            <param name="options"> The options to be used by PLcontext.</param>
+        </member>
+        <member name="P:PremierLeague.Data.PLContext.Teams">
+            <summary>
+            Gets or sets all teams.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.PLContext.Players">
+            <summary>
+            Gets or sets all players.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.PLContext.Managers">
+            <summary>
+            Gets or sets all managers.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Data.PLContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configures the database to be used for this context.
+            </summary>
+            <param name="optionsBuilder">Provides a simple API surface for configuring DbContextOptions.</param>
+        </member>
+        <member name="M:PremierLeague.Data.PLContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Further modifies the model of the database.
+            </summary>
+            <param name="modelBuilder">Used to construct a model for the context.</param>
+        </member>
+        <member name="T:PremierLeague.Data.Team">
+            <summary>
+            Contains the teams.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Team.TeamID">
+            <summary>
+            Gets or sets the ID of the team.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Team.Name">
+            <summary>
+            Gets or sets the name of the team.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Team.City">
+            <summary>
+            Gets or sets the city of the team.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Team.FoundationYear">
+            <summary>
+            Gets or sets the year the team was founded.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Team.TotalValue">
+            <summary>
+            Gets or sets the total value of the teams whole squad.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Team.Stadium">
+            <summary>
+            Gets or sets the name of the teams stadium.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Team.Players">
+            <summary>
+            Gets or sets the teams players.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Data.Team.Manager">
+            <summary>
+            Gets or sets the teams manager.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Data.Team.ToString">
+            <summary>
+            Converts the value of the teams properties into a single string.
+            </summary>
+            <returns>string.</returns>
+        </member>
+        <member name="T:PremierLeague.Data.ToStringAttribute">
+            <summary>
+            The value of the property that has this attribute will be present in the toString method.
+            </summary>
+        </member>
+    </members>
+</doc>

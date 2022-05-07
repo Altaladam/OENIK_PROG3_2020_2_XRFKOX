@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PremierLeague.Data\PremierLeague.Data.csproj" />
+    <ProjectReference Include="..\PremierLeague.Logic\PremierLeague.Logic.csproj" />
+    <ProjectReference Include="..\PremierLeague.Repository\PremierLeague.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PremierLeague.WpfApp</name>
+    </assembly>
+    <members>
+        <member name="T:PremierLeague.WpfApp.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.WpfApp.App"/> class.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:PremierLeague.WpfApp.BL.IEditorService">
+            <summary>
+            Services the editor.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.IEditorService.EditPlayer(PremierLeague.WpfApp.Data.Player)">
+            <summary>
+            True if the user clicked the ok on the edit screen, else false.
+            </summary>
+            <param name="p">The selected player.</param>
+            <returns>Returns a bool.</returns>
+        </member>
+        <member name="T:PremierLeague.WpfApp.BL.IPlayerLogic">
+            <summary>
+            An interface containing the CRUD operations.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.IPlayerLogic.AddPlayer(System.Collections.Generic.IList{PremierLeague.WpfApp.Data.Player})">
+            <summary>
+            Adds a player to the list and the database.
+            </summary>
+            <param name="list">The list the players going to get added to.</param>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.IPlayerLogic.ModPlayer(PremierLeague.WpfApp.Data.Player)">
+            <summary>
+            Modifies the given player.
+            </summary>
+            <param name="playerToModify">The player to be modified.</param>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.IPlayerLogic.DelPlayer(System.Collections.Generic.IList{PremierLeague.WpfApp.Data.Player},PremierLeague.WpfApp.Data.Player)">
+            <summary>
+            Deletes the given player from the list and the database.
+            </summary>
+            <param name="list">The list from where the players going to get deleted.</param>
+            <param name="player">The player to be deleted.</param>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.IPlayerLogic.GetAllPlayers">
+            <summary>
+            Gets all players from the database.
+            </summary>
+            <returns>Returns all players from the database.</returns>
+        </member>
+        <member name="T:PremierLeague.WpfApp.BL.PlayerLogic">
+            <summary>
+            Contains the CRUD operations.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.BL.PlayerLogic.EditorService">
+            <summary>
+            An instance of the editorservice.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.BL.PlayerLogic.MessengerService">
+            <summary>
+            An instance of the messengerservice.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.PlayerLogic.#ctor(PremierLeague.WpfApp.BL.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.WpfApp.BL.PlayerLogic"/> class.
+            </summary>
+            <param name="editorService">An instance of the editorservice.</param>
+            <param name="messengerService">An instance of the messengerservice.</param>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.PlayerLogic.AddPlayer(System.Collections.Generic.IList{PremierLeague.WpfApp.Data.Player})">
+            <summary>
+            Adds a player to the list and the database.
+            </summary>
+            <param name="list">The list that the player gets added to.</param>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.PlayerLogic.DelPlayer(System.Collections.Generic.IList{PremierLeague.WpfApp.Data.Player},PremierLeague.WpfApp.Data.Player)">
+            <summary>
+            Deletes the given player from the list and the database.
+            </summary>
+            <param name="list">The list that the player gets deleted from.</param>
+            <param name="player">The player to be deleted.</param>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.PlayerLogic.GetAllPlayers">
+            <summary>
+            Gets all the players in the database.
+            </summary>
+            <returns>Returns a list of all players in the database.</returns>
+        </member>
+        <member name="M:PremierLeague.WpfApp.BL.PlayerLogic.ModPlayer(PremierLeague.WpfApp.Data.Player)">
+            <summary>
+            Modifies the given player.
+            </summary>
+            <param name="playerToModify">The player to modify.</param>
+        </member>
+        <member name="T:PremierLeague.WpfApp.Data.Position">
+            <summary>
+            An enum of the possible positions.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.Data.Position.Goalkeeper">
+            <summary>
+            The position of Goalkeeper.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.Data.Position.Defender">
+            <summary>
+            The position of Defender.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.Data.Position.Midfielder">
+            <summary>
+            The position of Midfielder.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.Data.Position.Forward">
+            <summary>
+            The position of Forward.
+            </summary>
+        </member>
+        <member name="T:PremierLeague.WpfApp.Data.Player">
+            <summary>
+            An element of the Player table.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Data.Player.Name">
+            <summary>
+            Gets or sets the name of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Data.Player.Birthday">
+            <summary>
+            Gets or sets the birthday of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Data.Player.Nationality">
+            <summary>
+            Gets or sets the nationality of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Data.Player.Position">
+            <summary>
+            Gets or sets the position of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Data.Player.Value">
+            <summary>
+            Gets or sets the value of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Data.Player.Id">
+            <summary>
+            Gets or sets the id of the player.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.Data.Player.CopyFrom(PremierLeague.WpfApp.Data.Player)">
+            <summary>
+            Copies the other player into this player.
+            </summary>
+            <param name="other">The player thats properties are going to be copied.</param>
+        </member>
+        <member name="T:PremierLeague.WpfApp.Factory">
+            <summary>
+            Instantiates everything.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Factory.Context">
+            <summary>
+            Gets an instance of the context.
+            </summary>
+            <returns>An instance of the context.</returns>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Factory.TeamRepository">
+            <summary>
+            Gets an instance of the TeamRepository.
+            </summary>
+            <returns>An instance of the TeamRepository.</returns>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Factory.PlayerRepository">
+            <summary>
+            Gets an instance of the PlayerRepository.
+            </summary>
+            <returns>An instance of the PlayerRepository.</returns>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Factory.ManagerRepository">
+            <summary>
+            Gets an instance of the ManagerRepository.
+            </summary>
+            <returns>An instance of the ManagerRepository.</returns>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Factory.ReadLogic">
+            <summary>
+            Gets an instance of the ReadLogic.
+            </summary>
+            <returns>An instance of the ReadLogic.</returns>
+        </member>
+        <member name="P:PremierLeague.WpfApp.Factory.ModifyLogic">
+            <summary>
+            Gets an instance of the ModifyLogic.
+            </summary>
+            <returns>An instance of the ModifyLogic.</returns>
+        </member>
+        <member name="T:PremierLeague.WpfApp.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.MainWindow.VM">
+            <summary>
+            An instance of the MainViewModel.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.WpfApp.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PremierLeague.WpfApp.MyIoc">
+            <summary>
+            An implementation of the SimpleIoc.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.MyIoc.Instance">
+            <summary>
+            Gets an instance of the MyIoc.
+            </summary>
+        </member>
+        <member name="T:PremierLeague.WpfApp.UI.EditorServiceViaWindow">
+            <summary>
+            An editorservice via window.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.UI.EditorServiceViaWindow.EditPlayer(PremierLeague.WpfApp.Data.Player)">
+            <summary>
+            True if the player is to be edited.
+            </summary>
+            <param name="p">The selected player.</param>
+            <returns>Returns true if the player is to be edited.</returns>
+        </member>
+        <member name="T:PremierLeague.WpfApp.UI.EditorWindow">
+            <summary>
+            Interaction logic for EditorWindow.xaml.
+            </summary>
+            <summary>
+            EditorWindow
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.UI.EditorWindow.VM">
+            <summary>
+            An instance of the viewmodel.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.UI.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.WpfApp.UI.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.UI.EditorWindow.#ctor(PremierLeague.WpfApp.Data.Player)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.WpfApp.UI.EditorWindow"/> class.
+            </summary>
+            <param name="oldPlayer">The old player.</param>
+        </member>
+        <member name="P:PremierLeague.WpfApp.UI.EditorWindow.Player">
+            <summary>
+            Gets an instance of the player.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.UI.EditorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PremierLeague.WpfApp.UI.PositionToBrushConverter">
+            <summary>
+            Converts the positions into brush colors.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.UI.PositionToBrushConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a position into a brush color.
+            </summary>
+            <param name="value">The position.</param>
+            <param name="targetType">The type of the target.</param>
+            <param name="parameter">Parameter.</param>
+            <param name="culture">The culture of the UI.</param>
+            <returns>Returns an object.</returns>
+        </member>
+        <member name="M:PremierLeague.WpfApp.UI.PositionToBrushConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Does nothing.
+            </summary>
+            <param name="value">The position.</param>
+            <param name="targetType">The type of the target.</param>
+            <param name="parameter">Parameter.</param>
+            <param name="culture">The culture of the UI.</param>
+            <returns>Returns an object.</returns>
+        </member>
+        <member name="T:PremierLeague.WpfApp.VM.EditorViewModel">
+            <summary>
+            The viewmodel of the editor window.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.VM.EditorViewModel.player">
+            <summary>
+            An instance of the player.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.VM.EditorViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.WpfApp.VM.EditorViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.VM.EditorViewModel.Positions">
+            <summary>
+            Gets an array of all positions.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.VM.EditorViewModel.Player">
+            <summary>
+            Gets or sets an instance of the player.
+            </summary>
+        </member>
+        <member name="T:PremierLeague.WpfApp.VM.MainViewModel">
+            <summary>
+            The viewmodel of the main window.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.WpfApp.VM.MainViewModel.playerSelected">
+            <summary>
+            The selected player.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.WpfApp.VM.MainViewModel.#ctor(PremierLeague.WpfApp.BL.IPlayerLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.WpfApp.VM.MainViewModel"/> class.
+            </summary>
+            <param name="logic">An instance of the playerlogic.</param>
+        </member>
+        <member name="M:PremierLeague.WpfApp.VM.MainViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.WpfApp.VM.MainViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.VM.MainViewModel.PlayerSelected">
+            <summary>
+            Gets or sets the selected player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.VM.MainViewModel.Players">
+            <summary>
+            Gets a collection of the players.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.VM.MainViewModel.AddCmd">
+            <summary>
+            Gets the add command.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.VM.MainViewModel.ModCmd">
+            <summary>
+            Gets the modify command.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.WpfApp.VM.MainViewModel.DelCmd">
+            <summary>
+            Gets the delete command.
+            </summary>
+        </member>
+    </members>
+</doc>

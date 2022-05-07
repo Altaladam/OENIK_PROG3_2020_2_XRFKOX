@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PremierLeague.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:PremierLeague.Repository.GenericRepository`1">
+            <summary>
+            The generic repository class for the CRUD operations.
+            </summary>
+            <typeparam name="T">Generic T type element.</typeparam>
+        </member>
+        <member name="M:PremierLeague.Repository.GenericRepository`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Repository.GenericRepository`1"/> class.
+            </summary>
+            <param name="ctx">The context of the database.</param>
+        </member>
+        <member name="P:PremierLeague.Repository.GenericRepository`1.Ctx">
+            <summary>
+            Gets or sets the context of the database.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Repository.GenericRepository`1.Add(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.GenericRepository`1.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.GenericRepository`1.GetAll">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.GenericRepository`1.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PremierLeague.Repository.IManagerRepository">
+            <summary>
+            Provides functionality for the CRUD operations of the managers.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Repository.IManagerRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            Changes the name of the manager.
+            </summary>
+            <param name="id">The ID of the manager whose name's to be changed.</param>
+            <param name="newName">The new name of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IManagerRepository.ChangeBirthday(System.Int32,System.DateTime)">
+            <summary>
+            Changes the birthday of the manager.
+            </summary>
+            <param name="id">The ID of the manager whose birthday's to be changed.</param>
+            <param name="newBirthday">The new birthday of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IManagerRepository.ChangeNationality(System.Int32,System.String)">
+            <summary>
+            Changes the nationality of the manager.
+            </summary>
+            <param name="id">The ID of the manager whose nationality's to be changed.</param>
+            <param name="newNationality">The new nationality of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IManagerRepository.ChangeContractStart(System.Int32,System.DateTime)">
+            <summary>
+            Changes the start of the contract of the manager.
+            </summary>
+            <param name="id">The ID of the manager whose contracts start is to be changed.</param>
+            <param name="newContractStart">The new start of the contract of the manager.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IManagerRepository.ChangePreferredFormation(System.Int32,System.String)">
+            <summary>
+            Changes the preferred formation of the manager.
+            </summary>
+            <param name="id">The ID of the manager whose preferred formation's to be changed.</param>
+            <param name="newPreferredFormation">The new preferred formation of the manager.</param>
+        </member>
+        <member name="T:PremierLeague.Repository.IPlayerRepository">
+            <summary>
+            Provides functionality for the CRUD operations of the players.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Repository.IPlayerRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            Changes the name of the player.
+            </summary>
+            <param name="id">The ID of the player whose name's to be changed.</param>
+            <param name="newName">The new name of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IPlayerRepository.ChangeBirthday(System.Int32,System.DateTime)">
+            <summary>
+            Changes the birthday of the player.
+            </summary>
+            <param name="id">The ID of the player whose birthday's to be changed.</param>
+            <param name="newBirthday">The new birthday of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IPlayerRepository.ChangeNationality(System.Int32,System.String)">
+            <summary>
+            Changes the nationality of the player.
+            </summary>
+            <param name="id">The ID of the player whose nationality's to be changed.</param>
+            <param name="newNationality">The new nationality of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IPlayerRepository.ChangePosition(System.Int32,System.String)">
+            <summary>
+            Changes the position of the player.
+            </summary>
+            <param name="id">The ID of the player whose position's to be changed.</param>
+            <param name="newPosition">The new position of the player.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IPlayerRepository.ChangeValue(System.Int32,System.Int32)">
+            <summary>
+            Changes the value of the player.
+            </summary>
+            <param name="id">The ID of the player whose value's to be changed.</param>
+            <param name="newValue">The new value of the player.</param>
+        </member>
+        <member name="T:PremierLeague.Repository.IRepository`1">
+            <summary>
+            Provides functionality for the CRUD operations.
+            </summary>
+            <typeparam name="T">Generic type.</typeparam>
+        </member>
+        <member name="M:PremierLeague.Repository.IRepository`1.GetOne(System.Int32)">
+            <summary>
+            Gets one element.
+            </summary>
+            <param name="id">The ID of the element.</param>
+            <returns>A generic T type element.</returns>
+        </member>
+        <member name="M:PremierLeague.Repository.IRepository`1.GetAll">
+            <summary>
+            Gets all elements.
+            </summary>
+            <returns>A generic T type IQueryable collection.</returns>
+        </member>
+        <member name="M:PremierLeague.Repository.IRepository`1.Add(`0)">
+            <summary>
+            Adds one element.
+            </summary>
+            <param name="t">A generic T type element.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.IRepository`1.Delete(System.Int32)">
+            <summary>
+            Deletes one element.
+            </summary>
+            <param name="id">The ID of the element to be deleted.</param>
+        </member>
+        <member name="T:PremierLeague.Repository.ITeamRepository">
+            <summary>
+            Provides functionality for the CRUD operations of the teams.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Repository.ITeamRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            Changes the name of the team.
+            </summary>
+            <param name="id">The ID of the team thats name's to be changed.</param>
+            <param name="newName">The new name of the team.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.ITeamRepository.ChangeCity(System.Int32,System.String)">
+            <summary>
+            Changes the city of the team.
+            </summary>
+            <param name="id">The ID of the team thats city's to be changed.</param>
+            <param name="newCity">The new city of the team.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.ITeamRepository.ChangeFoundationYear(System.Int32,System.Int32)">
+            <summary>
+            Changes the year the team was founded.
+            </summary>
+            <param name="id">The ID of the team thats foundations year's to be changed.</param>
+            <param name="newFoundationYear">The new foundation year of the team.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.ITeamRepository.ChangeValue(System.Int32,System.Int32)">
+            <summary>
+            Changes the value of the team.
+            </summary>
+            <param name="id">The ID of the team thats value's to be changed.</param>
+            <param name="newValue">The new value of the team.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.ITeamRepository.ChangeStadium(System.Int32,System.String)">
+            <summary>
+            Changes the name of the teams stadium.
+            </summary>
+            <param name="id">The ID of the team thats stadiums name's to be changed.</param>
+            <param name="newStadium">The new name of the stadium of the team.</param>
+        </member>
+        <member name="T:PremierLeague.Repository.ManagerRepository">
+            <summary>
+            Implements the CRUD operations of the managers.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Repository.ManagerRepository"/> class.
+            </summary>
+            <param name="ctx">The context of the database.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.Add(PremierLeague.Data.Manager)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.ChangeBirthday(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.ChangeContractStart(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.ChangeNationality(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.ChangePreferredFormation(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.ManagerRepository.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PremierLeague.Repository.PlayerRepository">
+            <summary>
+            Implements the CRUD operations of the players.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Repository.PlayerRepository"/> class.
+            </summary>
+            <param name="ctx">The context of the database.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.Add(PremierLeague.Data.Player)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.ChangeBirthday(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.ChangeNationality(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.ChangePosition(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.ChangeValue(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.PlayerRepository.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PremierLeague.Repository.TeamRepository">
+            <summary>
+            Implements the CRUD operations of the teams.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Repository.TeamRepository"/> class.
+            </summary>
+            <param name="ctx">The context of the database.</param>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.Add(PremierLeague.Data.Team)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.ChangeCity(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.ChangeFoundationYear(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.ChangeStadium(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.ChangeValue(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PremierLeague.Repository.TeamRepository.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

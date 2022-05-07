@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PremierLeague.Web</name>
+    </assembly>
+    <members>
+        <member name="T:PremierLeague.Web.Controllers.HomeController">
+            <summary>
+            Auto generated Home Controller.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.Web.Controllers.HomeController.logger">
+            <summary>
+            Auto generated logger.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{PremierLeague.Web.Controllers.HomeController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Web.Controllers.HomeController"/> class.
+            </summary>
+            <param name="logger">A logger.</param>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.HomeController.Index">
+            <summary>
+            Index action.
+            </summary>
+            <returns>Returns an action interface.</returns>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.HomeController.Privacy">
+            <summary>
+            Privacy action.
+            </summary>
+            <returns>Returns an action interface.</returns>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.HomeController.Error">
+            <summary>
+            Error action.
+            </summary>
+            <returns>Returns an action interface.</returns>
+        </member>
+        <member name="T:PremierLeague.Web.Controllers.PlayersController">
+            <summary>
+            A controller for the players.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.Web.Controllers.PlayersController.modifyLogic">
+            <summary>
+            An instance of the IModifyLogic interface.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.Web.Controllers.PlayersController.readLogic">
+            <summary>
+            An instance of the IReadLogic interface.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.Web.Controllers.PlayersController.mapper">
+            <summary>
+            An instance of the mapper.
+            </summary>
+        </member>
+        <member name="F:PremierLeague.Web.Controllers.PlayersController.vm">
+            <summary>
+            An instance of the viewmodel.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.PlayersController.#ctor(PremierLeague.Logic.IModifyLogic,PremierLeague.Logic.IReadLogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Web.Controllers.PlayersController"/> class.
+            </summary>
+            <param name="modifyLogic">An instance of the IModifyLogic interface.</param>
+            <param name="readLogic">An instance of the IReadLogic interface.</param>
+            <param name="mapper">An instance of the IMapper interface.</param>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.PlayersController.Index">
+            <summary>
+            Index Action.
+            </summary>
+            <returns>An action interface.</returns>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.PlayersController.Details(System.Int32)">
+            <summary>
+            An action for getting the detailed view of one player.
+            </summary>
+            <param name="id">The id of the player.</param>
+            <returns>An action interface.</returns>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.PlayersController.Remove(System.Int32)">
+            <summary>
+            An action for deleting a player.
+            </summary>
+            <param name="id">The id of the player.</param>
+            <returns>An action interface.</returns>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.PlayersController.Edit(System.Int32)">
+            <summary>
+            An action for editing a player.
+            </summary>
+            <param name="id">The id of the player.</param>
+            <returns>An action interface.</returns>
+        </member>
+        <member name="M:PremierLeague.Web.Controllers.PlayersController.Edit(PremierLeague.Web.Models.Player,System.String)">
+            <summary>
+            An action for editing or adding a player.
+            </summary>
+            <param name="player">The player to be added or the player that has been edited.</param>
+            <param name="editAction">A string that decides if the player is being added or edited.</param>
+            <returns>An action interface.</returns>
+        </member>
+        <member name="T:PremierLeague.Web.Models.ErrorViewModel">
+            <summary>
+            Auto generated VM for the errors.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.ErrorViewModel.RequestId">
+            <summary>
+            Gets or sets the id of the request.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            Gets a value indicating whether the RequestId is null or empty, or not.
+            </summary>
+        </member>
+        <member name="T:PremierLeague.Web.Models.MapperFactory">
+            <summary>
+            A factory for the mapper.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Web.Models.MapperFactory.CreateMapper">
+            <summary>
+            Creates a mapper.
+            </summary>
+            <returns>Returns the created mapper.</returns>
+        </member>
+        <member name="T:PremierLeague.Web.Models.Player">
+            <summary>
+            An element of the Player table.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.Player.Name">
+            <summary>
+            Gets or sets the name of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.Player.Birthday">
+            <summary>
+            Gets or sets the birthday of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.Player.Nationality">
+            <summary>
+            Gets or sets the nationality of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.Player.Position">
+            <summary>
+            Gets or sets the position of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.Player.Value">
+            <summary>
+            Gets or sets the value of the player.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.Player.Id">
+            <summary>
+            Gets or sets the id of the player.
+            </summary>
+        </member>
+        <member name="T:PremierLeague.Web.Models.PlayerListViewModel">
+            <summary>
+            A viewmodel of the list of players.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.PlayerListViewModel.Players">
+            <summary>
+            Gets or sets a list of the players.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Web.Models.PlayerListViewModel.EditedPlayer">
+            <summary>
+            Gets or sets the edited player.
+            </summary>
+        </member>
+        <member name="T:PremierLeague.Web.Program">
+            <summary>
+            The main Program.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Web.Program.Main(System.String[])">
+            <summary>
+            The main method of the Program class.
+            </summary>
+            <param name="args"> An array of strings.</param>
+        </member>
+        <member name="M:PremierLeague.Web.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Creates the host builder.
+            </summary>
+            <param name="args">An array of strings.</param>
+            <returns>REturns an IHostBuilder.</returns>
+        </member>
+        <member name="T:PremierLeague.Web.Startup">
+            <summary>
+            The startup class.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PremierLeague.Web.Startup"/> class.
+            </summary>
+            <param name="configuration">An instance of the IConfiguration interface.</param>
+        </member>
+        <member name="P:PremierLeague.Web.Startup.Configuration">
+            <summary>
+            Gets an instance of the IConfiguration interface.
+            </summary>
+        </member>
+        <member name="M:PremierLeague.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The method that configures the services.
+            </summary>
+            <param name="services">A collection of services.</param>
+        </member>
+        <member name="M:PremierLeague.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            The method that configures the application.
+            </summary>
+            <param name="app">An instance of an ApplicationBuilder.</param>
+            <param name="env">An instance of a WebHostEnvironment.</param>
+        </member>
+    </members>
+</doc>

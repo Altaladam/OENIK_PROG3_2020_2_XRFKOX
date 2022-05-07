@@ -1,0 +1,31 @@
+﻿@model PremierLeague.Web.Models.Player
+
+<h2>PlayersEdit</h2>
+
+@using (Html.BeginForm("Edit", "Players"))
+{
+    @Html.ValidationSummary()
+
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.Id)
+
+    @Html.Hidden("editAction", ViewData["editAction"].ToString())
+
+    <div class="editor-label">@Html.LabelFor(m => m.Name)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Name)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Nationality)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Nationality)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Birthday)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Birthday)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Position)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Position)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Value)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Value)</div>
+
+    <input type="submit" value="KÜLDÉS" />
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PremierLeague.Program</name>
+    </assembly>
+    <members>
+        <member name="T:PremierLeague.Program.Factory">
+            <summary>
+            Instantiates everything.
+            </summary>
+        </member>
+        <member name="P:PremierLeague.Program.Factory.Context">
+            <summary>
+            Gets an instance of the context.
+            </summary>
+            <returns>An instance of the context.</returns>
+        </member>
+        <member name="P:PremierLeague.Program.Factory.TeamRepository">
+            <summary>
+            Gets an instance of the TeamRepository.
+            </summary>
+            <returns>An instance of the TeamRepository.</returns>
+        </member>
+        <member name="P:PremierLeague.Program.Factory.PlayerRepository">
+            <summary>
+            Gets an instance of the PlayerRepository.
+            </summary>
+            <returns>An instance of the PlayerRepository.</returns>
+        </member>
+        <member name="P:PremierLeague.Program.Factory.ManagerRepository">
+            <summary>
+            Gets an instance of the ManagerRepository.
+            </summary>
+            <returns>An instance of the ManagerRepository.</returns>
+        </member>
+        <member name="P:PremierLeague.Program.Factory.ReadLogic">
+            <summary>
+            Gets an instance of the ReadLogic.
+            </summary>
+            <returns>An instance of the ReadLogic.</returns>
+        </member>
+        <member name="P:PremierLeague.Program.Factory.ModifyLogic">
+            <summary>
+            Gets an instance of the ModifyLogic.
+            </summary>
+            <returns>An instance of the ModifyLogic.</returns>
+        </member>
+        <member name="T:PremierLeague.Program.Program">
+            <summary>
+            Instances everything and implements the menu.
+            </summary>
+        </member>
+    </members>
+</doc>
