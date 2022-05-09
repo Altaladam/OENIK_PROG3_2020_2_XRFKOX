@@ -62,7 +62,7 @@ function display() {
         innerhtml +=
             + t.value + "</td><td>"
         innerhtml +=
-            t.teamname + "</td><td>"
+            t.teamName + "</td><td>"
         innerhtml +=
             `<button type="button" onclick="remove(${t.playerID})">Delete</button>`
             + "</td></tr>"
