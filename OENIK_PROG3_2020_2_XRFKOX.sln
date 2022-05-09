@@ -15,11 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PremierLeague.WpfApp", "Pre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PremierLeague.Logic.Tests", "PremierLeague.Logic.Tests\PremierLeague.Logic.Tests.csproj", "{94D00046-9E31-4DAA-90C8-C43804407652}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PremierLeague.Web", "PremierLeague.Web\PremierLeague.Web.csproj", "{29BAA5BD-A722-45AD-B61E-F70478BE9F81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PremierLeague.JSClient", "PremierLeague.JSClient\PremierLeague.JSClient.csproj", "{98A3D2AF-E76C-440B-91BF-C34256BBFC72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremierLeague.JSClient", "PremierLeague.JSClient\PremierLeague.JSClient.csproj", "{98A3D2AF-E76C-440B-91BF-C34256BBFC72}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremierLeague.Endpoint", "PremierLeague.Endpoint\PremierLeague.Endpoint.csproj", "{F956A054-FBF3-407D-AFF3-F6237D963362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PremierLeague.Endpoint", "PremierLeague.Endpoint\PremierLeague.Endpoint.csproj", "{F956A054-FBF3-407D-AFF3-F6237D963362}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +49,6 @@ Global
 		{94D00046-9E31-4DAA-90C8-C43804407652}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94D00046-9E31-4DAA-90C8-C43804407652}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94D00046-9E31-4DAA-90C8-C43804407652}.Release|Any CPU.Build.0 = Release|Any CPU
-		{29BAA5BD-A722-45AD-B61E-F70478BE9F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29BAA5BD-A722-45AD-B61E-F70478BE9F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29BAA5BD-A722-45AD-B61E-F70478BE9F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29BAA5BD-A722-45AD-B61E-F70478BE9F81}.Release|Any CPU.Build.0 = Release|Any CPU
 		{98A3D2AF-E76C-440B-91BF-C34256BBFC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{98A3D2AF-E76C-440B-91BF-C34256BBFC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A3D2AF-E76C-440B-91BF-C34256BBFC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
