@@ -46,5 +46,7 @@ namespace PremierLeague.Repository
         /// <param name="id">The ID of the player whose value's to be changed.</param>
         /// <param name="newValue">The new value of the player.</param>
         void ChangeValue(int id, int newValue);
+
+        void ChangePlayerTeam(int playerId, int teamId);
     }
 }

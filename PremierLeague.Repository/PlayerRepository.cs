@@ -70,6 +70,13 @@ namespace PremierLeague.Repository
             this.Ctx.SaveChanges();
         }
 
+        public void ChangePlayerTeam(int playerId, int teamId)
+        {
+            var player = this.GetOne(playerId);
+            player.TeamID = teamId;
+            this.Ctx.SaveChanges();
+        }
+
         /// <inheritdoc/>
         public override void Delete(int id)
         {

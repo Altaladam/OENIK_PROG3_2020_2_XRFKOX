@@ -143,8 +143,7 @@ namespace PremierLeague.Logic
 
         public void ChangePlayerTeam(int playerId, int teamId)
         {
-            this.playerRepo.GetOne(playerId).TeamID = this.teamRepo.GetOne(teamId).TeamID;
-            this.playerRepo.GetOne(playerId).Team = this.teamRepo.GetOne(teamId);
+            this.playerRepo.ChangePlayerTeam(playerId, teamId);
         }
 
         /// <summary>
