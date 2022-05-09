@@ -14,7 +14,7 @@ namespace PremierLeague.Endpoint.ViewModel
         public DateTime Birthday { get; set; }
         public string Position { get; set; }
         public int Value { get; set; }
-        public string TeamName { get; set; }
+        public string Team { get; set; }
 
         public static PlayerViewModel Convert(Player p)
         {
@@ -25,7 +25,7 @@ namespace PremierLeague.Endpoint.ViewModel
                 Birthday = p.Birthday,
                 Position = p.Position,
                 Value = p.Value,
-                TeamName = p.Team.Name
+                Team = p.Team.Name
             };
         }
 
